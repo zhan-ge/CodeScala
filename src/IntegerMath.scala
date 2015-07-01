@@ -2,19 +2,21 @@
 // Created by ZG on 15/7/1.
 // 
 
-object BMI {
+object IntegerMath {
   def main(args: Array[String]) {
-    val kg = 72.57
-    val heightM = 1.727
 
-    val bmi = kg/(heightM * heightM)
+    val lbs = 160
+    val height = 68
+
+    val bmi = lbs/(height * height) * 703.07
 
     if (bmi < 18.5){
       println("Under weight")
-    } else if (bmi < 25){
+    } else if(bmi < 25){
       println("Normal weight")
     } else {
       println("Over weight")
     }
+
   }
 }
