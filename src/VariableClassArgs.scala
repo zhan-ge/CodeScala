@@ -4,12 +4,12 @@
 
 object VariableClassArgs {
   def main(args: Array[String]) {
-    val sum = new Sum(1,23,5,3,5,2,1,1,2)
+    val sum = new Summ(1,23,5,3,5,2,1,1,2)
     println("sum.result = " + sum.result)
   }
 }
 
-class Sum(args:Int*){
+class Summ(args:Int*){
   def result:Int = {
     var total = 0
     for (x <- args) {
