@@ -17,14 +17,14 @@ object Animals {
     println("b1 = " + b1)
     println("h1 = " + h1)
 
-    val he1 = new Hyena
-    println("he1 = " + he1)
-
-    val dog1 = new Dog
-    println("dog1 = " + dog1)
-    println("dog1.bark() = " + dog1.bark())
-
-    val ran = new ImportClass
+//    val he1 = new Hyena
+//    println("he1 = " + he1)
+//
+//    val dog1 = new Dog
+//    println("dog1 = " + dog1)
+//    println("dog1.bark() = " + dog1.bark())
+//
+//    val ran = new ImportClass
 
   }
 
