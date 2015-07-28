@@ -1,5 +1,6 @@
+package CodingForTest
 
-// Created by ZG on 15/7/5.
+// Created by ZG on 15/7/28.
 // 
 
 object AddMultiply {

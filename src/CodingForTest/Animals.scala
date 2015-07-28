@@ -1,5 +1,6 @@
+package CodingForTest
 
-// Created by ZG on 15/7/6.
+// Created by ZG on 15/7/28.
 // 
 
 object Animals {
@@ -28,8 +29,3 @@ object Animals {
   }
 
 }
-
-// create some classes
-class Griaffe
-class Bear
-class Hippo
