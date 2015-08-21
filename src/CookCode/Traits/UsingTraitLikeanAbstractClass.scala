@@ -17,8 +17,8 @@ trait Pet {
 //  def comeToMaster() {"I'm coming!"}
 //}
 
-class Cat extends Pet {
-  // override the speak method
-  override def speak() { "meow" }   // 重写父类或特质的已实现方法时，使用override
-  def comeToMaster() { "That's not gonna happen." }
-}
+//class Cat extends Pet {
+//  // override the speak method
+//  override def speak() { "meow" }   // 重写父类或特质的已实现方法时，使用override
+//  def comeToMaster() { "That's not gonna happen." }
+//}
