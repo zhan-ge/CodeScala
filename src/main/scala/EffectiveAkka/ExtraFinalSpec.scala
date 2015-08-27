@@ -29,11 +29,11 @@ object ExtraFinalSpec extends App{
 
 }
 
-class ActorLevelOne(savingsAccountsTwo:ActorRef) extends Actor with ActorLogging{
+class ActorLevelOne(savingsAccountsTwo:ActorRef) extends Actor{
 
   println("ActorLevelOne Starting!")
 
-  def receive = LoggingReceive {
+  def receive = {
     case str:String =>
       println("Received a message list in ActorLevelOne!")
       val originalSender = sender()
@@ -73,9 +73,9 @@ class ActorLevelOne(savingsAccountsTwo:ActorRef) extends Actor with ActorLogging
   }
 }
 
-class ActorLevelTwo extends Actor with ActorLogging{
+class ActorLevelTwo extends Actor{
 
-  log.debug("ActorLevelTwo Starting!")
+  println("ActorLevelTwo Starting!")
 
   def receive = LoggingReceive{
     case alp:String =>
