@@ -52,7 +52,16 @@ libraryDependencies ++= {
     "commons-codec"       % "commons-codec"   % "1.10",
 
     // NLP
-    "edu.stanford.nlp"    % "stanford-corenlp" % "3.5.2"
+    "edu.stanford.nlp"    % "stanford-corenlp" % "3.5.2",
+
+    // HtmlUnit
+    "net.sourceforge.htmlunit" % "htmlunit"   % "2.18",
+
+    // Selenium-htmlunit-driver
+    "org.seleniumhq.selenium" % "selenium-htmlunit-driver" % "2.47.1",
+
+    // httpclient
+    "org.apache.httpcomponents" % "httpclient" % "4.5"
   )
 }
 

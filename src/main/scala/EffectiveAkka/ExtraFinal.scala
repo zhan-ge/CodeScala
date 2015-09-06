@@ -32,23 +32,23 @@ class AccountBalanceRetrieverFinal(savingsAccounts: ActorRef, checkingAccounts: 
           case CheckingAccountBalances(balances) =>
             log.debug(s"Received checking account balances: $balances")
             checkingBalances = balances
-            collectBalances
+            collectBalances()
           case SavingsAccountBalances(balances) =>
             log.debug(s"Received savings account balances: $balances")
             savingsBalances = balances
-            collectBalances
+            collectBalances()
           case MoneyMarketAccountBalances(balances) =>
             log.debug(s"Received money market account balances: $balances")
             mmBalances = balances
-            collectBalances
+            collectBalances()
           case AccountRetrievalTimeout =>
             sendResponseAndShutdown(AccountRetrievalTimeout)
         }
 
-        def collectBalances = (checkingBalances, savingsBalances, mmBalances) match {
+        def collectBalances() = (checkingBalances, savingsBalances, mmBalances) match {
           case (Some(c), Some(s), Some(m)) =>
             log.debug(s"Values received for all three account types")
-            timeoutMessager.cancel
+            timeoutMessager.cancel()
             sendResponseAndShutdown(AccountBalances(checkingBalances, savingsBalances, mmBalances))
           case _ =>
         }
