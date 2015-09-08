@@ -4,11 +4,13 @@ version := "1.0"
 
 scalaVersion := "2.11.7"
 scalaVersion in ThisBuild := "2.11.7"
+logLevel := sbt.Level.Debug
 
 scalacOptions := Seq("-feature", "-unchecked", "-deprecation", "-encoding", "utf8")
 
 resolvers ++= Seq("Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/",
   "Spray Repository"    at "http://repo.spray.io")
+resolvers += "Java.net Maven2 Repository" at "http://download.java.net/maven/2/"
 
 libraryDependencies ++= {
   val akkaV = "2.3.9"
@@ -27,7 +29,9 @@ libraryDependencies ++= {
     // test
     "io.spray"            %%  "spray-testkit" % sprayV  % "test",
     "com.typesafe.akka"   %%  "akka-testkit"  % akkaV   % "test",
-    "org.specs2"          %%  "specs2-core"   % "2.3.11" % "test",
+    "junit"               %   "junit"         % "4.12",
+    "com.novocode"        %   "junit-interface"% "0.9",
+    "org.scalatest"       %   "scalatest_2.11"% "2.2.4",
 
     // log
     "com.typesafe.akka"   %%  "akka-slf4j"      % akkaV,
@@ -37,7 +41,6 @@ libraryDependencies ++= {
     "org.json4s"          %% "json4s-native"  % "3.2.11",
 
     // Html parser
-    "junit"               % "junit"           % "4.12",
     "org.jsoup"           % "jsoup"           % "1.8.3",
 
     // redis-driver
@@ -45,8 +48,6 @@ libraryDependencies ++= {
 
     // mongo-driver
     "org.reactivemongo"   %% "reactivemongo"  % "0.11.4",
-
-    "org.ansj"            % "ansj_seg"        % "0.9",
 
     // base64 encode/decode
     "commons-codec"       % "commons-codec"   % "1.10",
